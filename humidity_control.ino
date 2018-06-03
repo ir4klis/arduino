@@ -5,7 +5,7 @@ dht DHT;
 #define DHT11_PIN 7
 
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(9600); // init serial to print info
   pinMode(6, OUTPUT);
     pinMode(5, OUTPUT);
      pinMode(4, OUTPUT);
@@ -16,9 +16,9 @@ void setup(){
 void loop()
 {
   int chk = DHT.read11(DHT11_PIN);
-  Serial.print("Temperature = ");
+  Serial.print("Temperature = "); // print temp 
   Serial.println(DHT.temperature);
-  Serial.print("Humidity = ");
+  Serial.print("Humidity = "); // print humidity 
   Serial.println(DHT.humidity);
   int temp1 = DHT.humidity;
   int thrshld = 49 ;
